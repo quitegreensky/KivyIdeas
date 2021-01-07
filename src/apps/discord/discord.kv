@@ -1,0 +1,36 @@
+
+<Discord>:
+    radius: dp(10)
+    canvas.before:
+        Color:
+            rgba: root.darkest
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    CardNavigation:
+        on_left_panel: bottom_navigation.show()
+        on_front_panel: bottom_navigation.hide()
+
+        LeftMenu:
+            id: left_menu
+
+
+        RightMenu:
+            id: right_menu
+
+        FrontMenu:
+
+
+    DiscordBottomNavigation:
+        id: bottom_navigation
+
+        DiscordBottomNavigationIcon:
+            icon: "account"
+
+        DiscordBottomNavigationIcon:
+            icon: "magnify"
+            
+        DiscordBottomNavigationIcon:
+            icon: "at"
+                    

@@ -1,0 +1,43 @@
+<Home>:
+    BoxLayout:
+        orientation:"vertical"
+
+        MDToolbar:
+            title: "My App"
+            left_action_items:[("menu", lambda x: None)]
+
+        ScrollView:
+            MDList:
+                spacing: dp(10)
+                padding: dp(10)
+
+                MDCard:
+                    size_hint_y: None
+                    height: dp(100)
+
+                    IconAvatar:
+                        bg_color: 0.4,0.1,0.5,1
+                        size_hint_x: None
+                        width:self.height
+                        avatar_size_hint: 0.6
+                        radius: [self.height/2,]
+                        ripple: True
+                        on_release: app.show_screen("discord")
+
+                    # ImageAvatar:
+                    #     source: "data/pic/11d.png"
+                    #     size_hint_x: None
+                    #     width:self.height
+                    #     avatar_size_hint: 0.6, 0.6
+                        # avatar_size: dp(100)
+
+
+                    BoxLayout:
+                        
+                MDCard:
+                    size_hint_y: None
+                    height: dp(100)
+
+                MDCard:
+                    size_hint_y: None
+                    height: dp(100)

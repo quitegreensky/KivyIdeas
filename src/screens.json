@@ -1,0 +1,16 @@
+{
+    "home": {
+        "cls": "Home",
+        "path": "screens/home",
+        "kv": "home.kv",
+        "py": "home"
+    },
+
+    "discord":{
+        "cls": "Discord",
+        "path": "apps/discord",
+        "kv": "discord.kv",
+        "py": "discord"
+    } 
+    
+}
