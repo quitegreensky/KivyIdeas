@@ -2,6 +2,8 @@ from kivy.uix.screenmanager import Screen
 from kivymd.theming import ThemableBehavior
 from kivymd_extensions.akivymd.uix.statusbarcolor import change_statusbar_color
 
+import screens.home.registers
+
 
 class Home(ThemableBehavior, Screen):
     def on_pre_enter(self, *args):

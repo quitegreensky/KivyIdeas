@@ -13,8 +13,9 @@ Builder.load_string(
     user_font_size: "25dp"
     text_color: root.text_color_secondary
 
+
 <DiscordToolbar>
-    radius: [root.border_radius,root.border_radius,0,0]
+    radius: [root.border_radius, root.border_radius, 0, 0]
     bg_color: root.light_dark
     height: dp(60)
 

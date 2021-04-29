@@ -11,6 +11,7 @@ Builder.load_string(
     """
 #:import get_hex_from_color kivy.utils.get_hex_from_color
 
+
 <DiscordChatSingle>
     size_hint_y: None
     height: self.minimum_height
@@ -21,10 +22,10 @@ Builder.load_string(
         orientation: "vertical"
         size_hint_x: None
         width: dp(55)
-        
+
         ImageAvatar:
             size_hint_y: None
-            size: left_bar.width, left_bar.width    
+            size: left_bar.width, left_bar.width
             source: root.source
 
         BoxLayout:
@@ -33,7 +34,6 @@ Builder.load_string(
         orientation: "vertical"
         size_hint_y: None
         height: self.minimum_height
-
 
         DiscordLabel:
             text: root.user + "   " + f"[size={int(dp(10))}][color={get_hex_from_color(root.text_color_secondary)}]{root.get_date()}[/color][/size]"

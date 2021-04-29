@@ -13,11 +13,12 @@ Builder.load_string(
     orientation: "vertical"
     MDIconButton:
         icon: root.icon
-        theme_text_color:"Custom"
+        theme_text_color: "Custom"
         text_color: root.text_color_secondary if root.active else root.light_dark
         valign: "center"
         on_release: root.make_active()
         pos_hint: {"center_x": .5}
+
 
 <DiscordBottomNavigation>:
     size_hint_y: None
@@ -29,8 +30,7 @@ Builder.load_string(
         RoundedRectangle:
             pos: self.pos
             size: self.size
-            radius: root.radius if root.radius else [0,]
-
+            radius: root.radius if root.radius else [0, ]
     """
 )
 

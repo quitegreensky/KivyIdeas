@@ -18,7 +18,7 @@ Builder.load_string(
     BoxLayout:
         size_hint_x: None
         width: dp(80)
-        orientation:"vertical"
+        orientation: "vertical"
         id: servers_box
         spacing: dp(10)
 
@@ -28,20 +28,20 @@ Builder.load_string(
 
         DiscordIcon:
             size_hint: None, None
-            size: [servers_box.width - dp(30),servers_box.width - dp(30)]        
+            size: [servers_box.width - dp(30), servers_box.width - dp(30)]
             pos_hint: {"center_x": .5}
             icon: "message"
             bg_color: root.light_dark
             color: root.text_color_secondary
-            radius: [servers_box.width - dp(10),]
-        
+            radius: [servers_box.width - dp(10), ]
+
         HorizontalSeparator:
             height: dp(3)
             separator_color: root.light_dark
             pos_hint: {"center_x": .5}
             size_hint_x: None
             width : servers_box.width - dp(30)
-            radius: [dp(2),]
+            radius: [dp(2), ]
 
         DiscordChannelIcons:
             id: channels_icon
@@ -54,16 +54,18 @@ Builder.load_string(
             RoundedRectangle:
                 pos: self.pos
                 size: self.size
-                radius: [root.border_radius,root.border_radius,0,0]
+                radius: [root.border_radius, root.border_radius, 0, 0]
 
         DiscordToolbar:
             title: "KivyMD"
+
             LeftToolbarItems:
+
                 DiscordToolbarButton:
                     icon: "menu"
 
-
         NoTransitionScrollView:
+
             DiscordChannelList:
                 padding: dp(20)
                 spacing: dp(10)
@@ -71,11 +73,8 @@ Builder.load_string(
                 data: root.channel_list_data
                 _root: root
 
-
     VerticalSeparator:
         width: dp(10)
-
-
     """
 )
 

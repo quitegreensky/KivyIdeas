@@ -39,7 +39,7 @@ Builder.load_string(
     size: dp(40), dp(40)
     bg_color: root.darkest
     color: root.text_color_secondary
-    radius: [self.height/2,]
+    radius: [self.height / 2, ]
     pos_hint: {"center_y": .5}
 
     """

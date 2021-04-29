@@ -11,13 +11,15 @@ Builder.load_string(
     """
 <FrontMenu>
     elevation: 5
+
     canvas.before:
         Color:
             rgba: root.light_dark
         RoundedRectangle:
             pos: self.pos
             size: self.size
-            radius: [root.border_radius,root.border_radius,0,0]
+            radius: [root.border_radius, root.border_radius, 0, 0]
+
     BoxLayout:
         pos: root.pos
         orientation: "vertical"
@@ -26,6 +28,7 @@ Builder.load_string(
             title: "# support"
             bg_color: root.dark
             id: front_toolbar
+
             LeftToolbarItems:
                 DiscordToolbarButton:
                     icon: "menu"
@@ -42,8 +45,9 @@ Builder.load_string(
                     icon: "account-supervisor"
                     size_hint: None, None
                     size: front_toolbar.height, front_toolbar.height
-                    
+
         MessageScrollView:
+
             MDBoxLayout:
                 adaptive_height: True
                 id: message_box
@@ -71,10 +75,11 @@ Builder.load_string(
 
             BoxLayout:
                 padding: [dp(20), dp(5)]
+
                 DiscordTextField:
                     pos_hint: {"center_y": .5}
                     size_hint_y: 1
-                    on_text_validate: 
+                    on_text_validate:
                         root.send(self.text)
                         self.text = ""
 
@@ -83,7 +88,7 @@ Builder.load_string(
 
 
 class FrontMenu(RectangularElevationBehavior, MenuCardFront, DiscordTheme):
-    reply_message = "Please describe your question in one message, attach a minimal  code that may be run without additional manipulations, so developers can look at the working script and fix it. Also write what you expect from the script and what happened wrong. If needed, attach links or screenshots to explain us what you want to do."
+    reply_message = "Welcome to the channel!"
 
     def add_message(self, text, user, icon):
         message = DiscordChatSingle(message=text, user=user, source=icon)

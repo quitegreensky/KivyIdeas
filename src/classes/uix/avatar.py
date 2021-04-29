@@ -10,13 +10,14 @@ Builder.load_string(
     """
 <AvatarBase>
     _no_ripple_effect: False if root.ripple else True
+
     canvas.before:
         Color:
-            rgba: root.bg_color if root.bg_color else [0,0,0,0]
+            rgba: root.bg_color if root.bg_color else [0, 0, 0, 0]
         RoundedRectangle:
             pos: self.pos
             size: self.size
-            radius: root.radius if root.radius else [0,]
+            radius: root.radius if root.radius else [0, ]
 
 
 <IconAvatar>
@@ -32,15 +33,15 @@ Builder.load_string(
 <ImageAvatar>
     canvas:
         Color:
-            rgba: 1,1,1,1
+            rgba: 1, 1, 1, 1
         RoundedRectangle:
-            pos: (self.x + self.width/2 - root.avatar_size/2 ,\
-                self.y + self.height/2 - root.avatar_size/2) if root.avatar_size \
-                else (self.x + self.width/2 - self.width*self.avatar_size_hint/2,\
-                    self.y + self.height/2 - self.height*self.avatar_size_hint/2)
+            pos: (self.x + self.width / 2 - root.avatar_size / 2 , \
+                self.y + self.height / 2 - root.avatar_size / 2) if root.avatar_size \
+                else (self.x + self.width / 2 - self.width * self.avatar_size_hint / 2, \
+                    self.y + self.height / 2 - self.height * self.avatar_size_hint / 2)
 
-            size: (root.avatar_size,root.avatar_size) if root.avatar_size else [self.height*self.avatar_size_hint, self.height*self.avatar_size_hint]
-            radius: root.radius if root.radius else [0,]
+            size: (root.avatar_size, root.avatar_size) if root.avatar_size else [self.height * self.avatar_size_hint, self.height * self.avatar_size_hint]
+            radius: root.radius if root.radius else [0, ]
             source: root.source
 
     """

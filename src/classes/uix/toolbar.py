@@ -15,13 +15,11 @@ Builder.load_string(
 
     canvas.before:
         Color:
-            rgba: root.bg_color if root.bg_color else [1,0,0,1]
+            rgba: root.bg_color if root.bg_color else [1, 0, 0, 1]
         RoundedRectangle:
             pos: self.pos
             size: self.size
-            radius: root.radius if root.radius else [0,0,0,0]
-
-
+            radius: root.radius if root.radius else [0, 0, 0, 0]
 
     MDBoxLayout:
         adaptive_width: True
@@ -34,8 +32,10 @@ Builder.load_string(
         adaptive_width: True
         id: right_items
 
+
 <RightToolbarItems>
     adaptive_width: True
+
 
 <LeftToolbarItems>
     adaptive_width: True

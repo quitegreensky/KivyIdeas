@@ -25,7 +25,7 @@ Builder.load_string(
                 RoundedRectangle:
                     pos: self.pos
                     size: self.size
-                    radius: [root.border_radius,root.border_radius,0,0]
+                    radius: [root.border_radius, root.border_radius, 0, 0]
 
             DiscordChannelInfo:
                 text: "support"
@@ -37,32 +37,36 @@ Builder.load_string(
 
             MDBoxLayout:
                 adaptive_height: True
+
                 BoxLayout:
+
                 DiscordTextIconButton:
-                    icon : "magnify"
+                    icon: "magnify"
                     text: "Search"
+
                 DiscordTextIconButton:
-                    icon : "bell"
+                    icon: "bell"
                     text: "Notifications"
+
                 DiscordTextIconButton:
-                    icon : "cog"
-                    text: "Settings"    
+                    icon: "cog"
+                    text: "Settings"
+
                 DiscordTextIconButton:
-                    icon : "pin"
-                    text: "Pins"                                    
+                    icon: "pin"
+                    text: "Pins"
+
                 BoxLayout:
-                    
+
         MembersList:
             id: members
+
             canvas.before:
                 Color:
                     rgba: root.light_dark
                 Rectangle:
                     pos: self.pos
                     size: self.size
-
-
-
     """
 )
 

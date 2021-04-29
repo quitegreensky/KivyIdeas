@@ -38,6 +38,7 @@ Builder.load_string(
     MDBoxLayout:
         spacing: dp(10)
         adaptive_height: True
+
         DiscordLabel:
             text: root.description
             halign: "left"

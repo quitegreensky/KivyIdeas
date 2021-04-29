@@ -15,6 +15,7 @@ Builder.load_string(
     size_hint_x: None
     width : self._root.width - self._root.back_card_x_space
 
+
 <CardNavigation>:
 
     FloatLayout:
@@ -40,7 +41,7 @@ class MenuCardRight(MenuCard):
 
 
 class MenuCardFront(BoxLayout):
-    x_distance = NumericProperty("15dp")
+    x_distance = NumericProperty("10dp")
     _back_layout = ObjectProperty()
     _root = ObjectProperty()
     _x_pos_x = None
@@ -48,6 +49,9 @@ class MenuCardFront(BoxLayout):
     front_menu_opacity = NumericProperty(1)
 
     def on_touch_move(self, touch):
+        if not self._root.allow_swipe:
+            return True
+
         dis = touch.ox - touch.x
 
         if self._status == "right" and self.right <= self._root.back_card_x_space and dis > 0:
@@ -84,6 +88,8 @@ class MenuCardFront(BoxLayout):
         return super().on_touch_down(touch)
 
     def on_touch_up(self, touch):
+        if not self._root.allow_swipe:
+            return True
         x = touch.x - touch.ox
         if abs(x) > self._root.swipe_distance:
             # move show left
@@ -175,9 +181,10 @@ class MenuCardFront(BoxLayout):
 
 class CardNavigation(FloatLayout, EventDispatcher):
     back_card_x_space = NumericProperty("60dp")
-    swipe_distance = NumericProperty("200dp")
+    swipe_distance = NumericProperty("80dp")
     transition = StringProperty("out_quad")
     anim_duration = NumericProperty(0.2)
+    allow_swipe = BooleanProperty(True)
     _rightcard = ObjectProperty()
     _leftcard = ObjectProperty()
 

@@ -9,7 +9,8 @@ Builder.load_string(
 <RollTitle>
     size_hint_y: None
     height: self.minimum_height
-    padding: [dp(15),0]
+    padding: [dp(15), 0]
+
     DiscordLabel:
         adaptive_height: True
         text: root.text
@@ -19,12 +20,14 @@ Builder.load_string(
         halign: "left"
         font_size: dp(14)
 
+
 <MembersList>
     MDBoxLayout:
         padding: dp(10)
         orientation: "vertical"
         adaptive_height: True
         id: box
+
 
 <MemberItem>:
     size_hint_y: None
@@ -39,7 +42,7 @@ Builder.load_string(
     DiscordLabel:
         text: root.text
         theme_text_color: "Custom"
-        text_color: root.text_color if root.text_color else self.text_color_normal 
+        text_color: root.text_color if root.text_color else self.text_color_normal
         valign: "center"
         halign: "left"
         font_size: dp(15)

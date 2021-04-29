@@ -18,7 +18,7 @@ Builder.load_string(
 <DiscordChannelListItem>:
     size_hint_y: None
     height: dp(30)
-    padding: [dp(10),0,0,0]
+    padding: [dp(10), 0, 0, 0]
 
     MDIcon:
         size_hint_x: None
@@ -29,7 +29,7 @@ Builder.load_string(
         theme_text_color: "Custom"
         text_color: root.text_color_secondary
         font_size: dp(20)
-    
+
     DiscordLabel:
         text: root.text
         halign: "left"
@@ -37,6 +37,7 @@ Builder.load_string(
         theme_text_color: "Custom"
         text_color: root.text_color_secondary
         font_size: dp(15)
+
 
 <DiscordChannelTitle>
     size_hint_y: None
@@ -51,7 +52,7 @@ Builder.load_string(
         theme_text_color: "Custom"
         text_color: root.text_color_secondary
         font_size: dp(20)
-    
+
     DiscordLabel:
         text: root.text
         halign: "left"

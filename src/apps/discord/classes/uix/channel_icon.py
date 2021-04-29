@@ -18,7 +18,7 @@ Builder.load_string(
         Color:
             rgba: root.text_color_normal
         RoundedRectangle:
-            pos: self.pos[0], self.pos[1]+self.height/2-root._bar_height/2
+            pos: self.pos[0], self.pos[1]+self.height / 2-root._bar_height / 2
             size:  self.size[0], root._bar_height
             radius: [0, root.radius, root.radius, 0]
 
@@ -27,15 +27,19 @@ Builder.load_string(
     size_hint_y: None
     height: dp(55)
     spacing: dp(2)
+
     IconsBar:
         id: bar
+
     AnchorLayout:
         anchor_x: "center"
         anchor_y: "center"
+
         ImageAvatar:
             id: avatar
             source: root.source
             avatar_size: root.height
+
 
 <DiscordChannelIcons>
     MDBoxLayout:

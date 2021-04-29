@@ -7,14 +7,16 @@ Builder.load_string(
 <BaseSeparator>
     canvas:
         Color:
-            rgba: root.separator_color if root.separator_color else [0,0,0,0]
+            rgba: root.separator_color if root.separator_color else [0, 0, 0, 0]
         RoundedRectangle:
             pos: self.pos
             size: self.size
-            radius: root.radius if root.radius else [0,0,0,0]
+            radius: root.radius if root.radius else [0, 0, 0, 0]
+
 
 <VerticalSeparator>
     size_hint_x: None
+
 
 <HorizontalSeparator>
     size_hint_y: None

@@ -11,33 +11,9 @@
                 spacing: dp(10)
                 padding: dp(10)
 
-                MDCard:
-                    size_hint_y: None
-                    height: dp(100)
-
-                    IconAvatar:
-                        bg_color: 0.4,0.1,0.5,1
-                        size_hint_x: None
-                        width:self.height
-                        avatar_size_hint: 0.6
-                        radius: [self.height/2,]
-                        ripple: True
-                        on_release: app.show_screen("discord")
-
-                    # ImageAvatar:
-                    #     source: "data/pic/11d.png"
-                    #     size_hint_x: None
-                    #     width:self.height
-                    #     avatar_size_hint: 0.6, 0.6
-                        # avatar_size: dp(100)
-
-
-                    BoxLayout:
-                        
-                MDCard:
-                    size_hint_y: None
-                    height: dp(100)
-
-                MDCard:
-                    size_hint_y: None
-                    height: dp(100)
+                HomeMenuCard:
+                    on_release: app.show_screen("discord")
+                    icon: "discord"
+                    bg_color: 0.1,0.1,0.1,1
+                    icon_color: 0.3,0.3,0.3,1
+                    text: "Discord"
